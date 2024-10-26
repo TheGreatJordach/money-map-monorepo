@@ -2,7 +2,7 @@ services:
   db:
     image: postgres
     restart: always
-    container_name: expenseTracker
+    container_name: expensesTracker
     environment:
       POSTGRES_USER: ${DATASOURCE_USERNAME}
       POSTGRES_PASSWORD: ${DATASOURCE_PASSWORD}
