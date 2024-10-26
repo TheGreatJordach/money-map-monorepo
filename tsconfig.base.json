@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@money-map/core": ["core/src/index.ts"],
-      "@money-map/data-access": ["data-access/src/index.ts"]
+      "@money-map/data-access": ["data-access/src/index.ts"],
+      "@money-map/features": ["features/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -59,6 +59,16 @@ npx nx g @nrwl/nest:lib mylib
 ```
 
 ## Expense Tracker Features
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_money-map-monorepo&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_money-map-monorepo)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_money-map-monorepo&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_money-map-monorepo)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_money-map-monorepo&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_money-map-monorepo)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_money-map-monorepo&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_money-map-monorepo)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_money-map-monorepo&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_money-map-monorepo)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_money-map-monorepo&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_money-map-monorepo)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_money-map-monorepo&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_money-map-monorepo)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_money-map-monorepo&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_money-map-monorepo)
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_money-map-monorepo)
+
 ### Core Functionalities
 1. User Registration & Authentication
     * Secure signup with automatic profile creation
