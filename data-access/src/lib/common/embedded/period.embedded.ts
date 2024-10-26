@@ -6,7 +6,7 @@ import { Column } from 'typeorm';
  * @Column { type: 'date', comment: 'The date representing the month and year of the record' }
  * @property {Date} date - The date representing the month and year of the record.
  */
-export class Period {
+export class PeriodEmbedded {
   /**
    * const month = period.date.getMonth() + 1; // Month (1-12)
    * const year = period.date.getFullYear();

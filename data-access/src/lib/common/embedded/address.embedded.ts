@@ -3,7 +3,7 @@ import { Column } from 'typeorm';
 /**
  * Represents an address with street details, city, state, zip code, and country.
  */
-export class Address {
+export class AddressEmbedded {
   @Column()
   street1?:string
   @Column()

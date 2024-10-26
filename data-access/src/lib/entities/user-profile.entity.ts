@@ -1,6 +1,7 @@
 import { Column, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
-import { User } from './user.entity';
-import { Incomes } from './incomes.entity';
+import { UserEntity } from './user.entity';
+import { IncomesEntity } from './incomes.entity';
+
 
 
 /**
@@ -8,19 +9,19 @@ import { Incomes } from './incomes.entity';
  * @property {number} profileId - The unique identifier for the profile.
  * @property {string} profileName - The name of the profile.
  * @property {string} [profileImageUrl] - The URL of the profile image, if available.
- * @property {Incomes[]} incomes - Array of incomes associated with the profile.
- * @property {User} user - The user linked to this profile.
+ * @property {IncomesEntity[]} incomes - Array of incomes associated with the profile.
+ * @property {UserEntity} user - The user linked to this profile.
  */
 @Entity('user-profile')
-export class UserProfile {
+export class UserProfileEntity {
   @PrimaryGeneratedColumn()
   profileId!:number
   @Column()
   profileName!: string
   @Column()
   profileImageUrl?: string
-  @OneToMany(() => Incomes, (income) => income.userProfile, { onDelete: 'CASCADE' })
-  incomes!: Incomes[]
-  @OneToOne(() => User, (user) => user.profile)
-  user!:User
+  @OneToMany(() => IncomesEntity, (income) => income.userProfile, { onDelete: 'CASCADE' })
+  incomes!: IncomesEntity[]
+  @OneToOne(() => UserEntity, (user) => user.profile)
+  user!:UserEntity
 }

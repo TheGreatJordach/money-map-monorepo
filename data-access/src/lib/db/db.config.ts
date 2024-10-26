@@ -1,12 +1,12 @@
 import { ConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { User } from '../entities/user.entity';
-import { UserProfile } from '../entities/user-profile.entity';
-import { Incomes } from '../entities/incomes.entity';
-import { IncomeType } from '../entities/income.type.entity';
-import { SourceIncome } from '../entities/source-income.entity';
-import { Expense } from '../entities/expense.entity';
-import { ExpenseCategory } from '../entities/expense-category.entity';
+import { UserEntity } from '../entities/user.entity';
+import { UserProfileEntity } from '../entities/user-profile.entity';
+import { IncomesEntity } from '../entities/incomes.entity';
+import { IncomeTypeEntity } from '../entities/income.type.entity';
+import { SourceIncomeEntity } from '../entities/source-income.entity';
+import { ExpenseEntity } from '../entities/expense.entity';
+import { ExpenseCategoryEntity } from '../entities/expense-category.entity';
 
 
 export const getDbConfig = async (configService:ConfigService): Promise<TypeOrmModuleOptions> => ({
@@ -16,6 +16,6 @@ export const getDbConfig = async (configService:ConfigService): Promise<TypeOrmM
   username: configService.getOrThrow<string>("DATASOURCE_USERNAME"),
   password: configService.getOrThrow<string>("DATASOURCE_PASSWORD"),
   database: configService.getOrThrow<string>("DATASOURCE_DATABASE"),
-  entities: [User,UserProfile,Incomes,IncomeType,SourceIncome, Expense,ExpenseCategory],
+  entities: [UserEntity,UserProfileEntity,IncomesEntity,IncomeTypeEntity,SourceIncomeEntity, ExpenseEntity,ExpenseCategoryEntity],
   synchronize:true
 })

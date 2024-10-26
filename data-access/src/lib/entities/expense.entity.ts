@@ -1,6 +1,6 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
-import { Period } from '../common/embedded/period.embedded';
-import { ExpenseCategory } from './expense-category.entity';
+import { PeriodEmbedded } from '../common/embedded/period.embedded';
+import { ExpenseCategoryEntity } from './expense-category.entity';
 
 /**
  * Represents an expense entity.
@@ -9,11 +9,11 @@ import { ExpenseCategory } from './expense-category.entity';
  * @property {string} name - The name of the expense.
  * @property {string} [detail] - Additional details about the expense (optional).
  * @property {number} amount - The amount of the expense.
- * @property {Period} period - The period associated with the expense.
- * @property {ExpenseCategory} category - The category to which the expense belongs.
+ * @property {PeriodEmbedded} period - The period associated with the expense.
+ * @property {ExpenseCategoryEntity} category - The category to which the expense belongs.
  */
 @Entity('expenses')
-export class Expense{
+export class ExpenseEntity{
   @PrimaryGeneratedColumn("uuid")
   expenseID!:string
   @Column()
@@ -24,9 +24,9 @@ export class Expense{
   @Column({ type: 'decimal', precision: 10, scale: 2 })
   amount!: number;
 
-  @Column(() => Period, {prefix:false})
-  period!: Period
+  @Column(() => PeriodEmbedded, {prefix:false})
+  period!: PeriodEmbedded
 
-  @ManyToOne(() => ExpenseCategory, (expenseCat) => expenseCat.expenses)
-  category!: ExpenseCategory
+  @ManyToOne(() => ExpenseCategoryEntity, (expenseCat) => expenseCat.expenses)
+  category!: ExpenseCategoryEntity
 }
